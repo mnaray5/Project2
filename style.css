@@ -1,0 +1,9 @@
+.cButton{
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+button:hover{
+    color: white;
+    background-color: lightseagreen;
+}
