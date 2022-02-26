@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food & Drink!</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
+    
+
+</head>
+<script>
+    fWords = ["chicken fettuccine alfredo","double chocolate glazed donut", "cherry pie with homemade vanilla ice cream", "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
+              "crusty everything bagel", "chocolate chip cookie and milk", "after dinner mint", "mixed berry smoothie", "fresh fruit sorbet", "dark roast coffee with cream and sugar",
+              "champange and caviar", "chilled eggnog with cinnamon", "cold coconut water", "tropical pina colada", "darjeeling tea and lemon", "refreshing grapefruit spritzer", "a pitcher of fresh lemonade"];
+    
+    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 
+                    'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
+</script>
+<body>
+    <div style = "text-align: center;">
+        <div style="display: inline-flex; padding-top: 5px;"> 
+            <button class="btn" style="font-size: 30px; width: 50px; height: 50px; vertical-align: top; background:url('images/homeIcon.jfif'); border: 2px solid lightseagreen; background-size: 50px 50px;  background-repeat: no-repeat; background-position: center;" onclick="location.href='index.html';"></button>
+            <span style = "padding-left: 10px; padding-right: 60px;">
+                <h1>Welcome to Hangman!</h1>
+            </span>
+        </div>
+    </div>
+    <br><br>
+    <h2 style="text-align: center;">Category: Food & Drink</h2>
+    <br>
+    <div id = "main" style = "padding-left: 10px;">
+    <div id = "buttons" style = "text-align: center;padding: 10px;"></div>
+    </div>
+    <script src="rules.js"></script>
+    <script>
+        word = fWords[Math.floor(Math.random() * fWords.length)]; 
+        console.log(word);
+        makeWord(word);
+    </script>
+</body>
+</html>
