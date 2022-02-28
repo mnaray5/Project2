@@ -3,9 +3,14 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 
 var mWord = "";
 var myGuess = [];
 var fullGuess = [];
+var lives = 6;
+var found = 0;
+var list;
+
     this.makeWord = function(word){
         console.log(word);
         mWord = word;
+        document.getElementById("next").classList.add('old');
         result();
         makeButton();
     }
@@ -68,8 +73,48 @@ var fullGuess = [];
            fullGuess[x] = g;
            myGuess[x].innerHTML = " <span class='under'>" + g + "</span> ";
            console.log(myGuess[x].innerHTML);
+           found++;
           }
         }
+        if(checkWord()){
+          disableAllButtons();
+          console.log("winner!");
+          nextButton = document.getElementById("next");
+          nextButton.classList.remove('old');
+          nextButton.innerHTML = "You Win! Next Page!";
+          nextButton.classList.add('revealNext');
+          nextButton.disabled = false;
+          nextButton.onclick = function(){
+            location.href = "winner.html";
+          }
+        }
+        if(found == 0){
+          lives--;
+          //draw hangman
+        }
+        if(lives == 0){
+          disableAllButtons();
+          console.log("you loose");
+            //create a new next page button to winner
+
+        }
+        found = 0;
       }
 
-
+      this.checkWord = function(){
+        for(x = 0; x < mWord.length; x++){
+          if(fullGuess[x] != mWord.charAt(x)){
+            return false;
+          }
+        }
+        return true;
+      }
+      
+      this.disableAllButtons = function(){
+        for(x = 0; x < alphabet.length; x++){
+          dButtons = document.getElementById(alphabet[x])
+          dButtons.disabled = "true";
+          dButtons.classList.remove('btn2');
+          dButtons.classList.add('noButton');
+        }
+      }

@@ -4,13 +4,19 @@
 }
 
 button{
-    color: black;
-    background-color: Gainsboro;
+    color: lightseagreen;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid lightseagreen;
 }
 
 button:hover{
     color: white;
     background-color: lightseagreen;
+    border: 1px solid lightseagreen;
+}
+
+.btn{
+    border: 1px solid lightseagreen;
 }
 
 
@@ -23,7 +29,8 @@ button:hover{
     text-align: center;
     align-items: center;
     display: inline-flex;
-    padding: 15px;    
+    padding: 15px;
+    border-color: white;
 }
 
 .noButton{
@@ -35,11 +42,13 @@ button:hover{
     align-items: center;
     display: inline-flex;
     padding: 15px; 
+    border-color: rgb(245, 245, 245);
 }
 
 .noButton:hover{
-    background-color: Gainsboro;
-    color:black;
+    background-color: rgb(245, 245, 245);
+    color:lightseagreen;
+    border-color: rgb(245, 245, 245);
 }
 
 .dash{
@@ -56,4 +65,27 @@ button:hover{
 
 .space{
     padding: 15px;
+}
+
+.revealNext{
+    color: rgb(245, 245, 245);
+    background-color: lightseagreen;
+}
+
+.revealNext:hover{
+    color: lightseagreen;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid lightseagreen;
+}
+
+.old{
+    color:white;
+    background-color: white;
+    border-color:white;
+}
+
+.old:hover{
+    color: white;
+    background-color: white;
+    border-color:white;
 }
