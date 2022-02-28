@@ -14,9 +14,9 @@
 
 </head>
 <script>
-    fWords = ["chicken fettuccine alfredo","double chocolate glazed donut", "cherry pie with homemade vanilla ice cream", "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
-              "crusty everything bagel", "chocolate chip cookie and milk", "after dinner mint", "mixed berry smoothie", "fresh fruit sorbet", "dark roast coffee with cream and sugar",
-              "champange and caviar", "chilled eggnog with cinnamon", "cold coconut water", "tropical pina colada", "darjeeling tea and lemon", "refreshing grapefruit spritzer", "a pitcher of fresh lemonade"];
+    fWords = ["chicken fettuccine alfredo","double chocolate glazed donut",  "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
+              "crusty everything bagel", "candy chip cookie and milk", "after dinner mint", "mixed berry smoothie", "fresh fruit sorbet",
+              "champange and caviar", "chilled eggnog with cinnamon", "cold coconut water", "tropical pina colada", "darjeeling tea and lemon", "chill grapefruit spritzer", "a pitcher of fresh lemonade"];
     
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 
                     'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -33,12 +33,16 @@
     <br><br>
     <h2 style="text-align: center;">Category: Food & Drink</h2>
     <br>
-    <div id = "main" style = "padding-left: 10px;">
-    <div id = "buttons" style = "text-align: center;padding: 10px;"></div>
+    <div id = "main">
+        <div style = "text-align: center;">
+            <div id = "mainGuess" style = "padding-right: 20px;"></div>
+
+        </div>
+    <div id = "buttons" style = "text-align: center;"></div>
     </div>
     <script src="rules.js"></script>
     <script>
-        word = fWords[Math.floor(Math.random() * fWords.length)]; 
+       word = fWords[Math.floor(Math.random() * fWords.length)]; 
         console.log(word);
         makeWord(word);
     </script>
