@@ -81,7 +81,7 @@ var list;
           console.log("winner!");
           nextButton = document.getElementById("next");
           nextButton.classList.remove('old');
-          nextButton.innerHTML = "You Win! Next Page!";
+          nextButton.innerHTML = "You Win!" + "<br>" + "Next Page!";
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
           nextButton.onclick = function(){
@@ -95,7 +95,14 @@ var list;
         if(lives == 0){
           disableAllButtons();
           console.log("you loose");
-            //create a new next page button to winner
+          nextButton = document.getElementById("next");
+          nextButton.classList.remove('old');
+          nextButton.innerHTML = "Sorry, You Loose:(" + "<br />"+ "Next Page :(";
+          nextButton.classList.add('revealNext');
+          nextButton.disabled = false;
+          nextButton.onclick = function(){
+            location.href = "loser.html";
+          }
 
         }
         found = 0;
