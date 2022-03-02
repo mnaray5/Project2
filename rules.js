@@ -36,8 +36,8 @@ var list;
       this.check = function(){
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
-        ctx.font = "20px Arial";
-        ctx.fillText("Lives: " + lives, 220, 20);
+        ctx.font = "25px Trebuchet MS  ";
+        ctx.fillText("Lives: " + lives, 210, 20);
         list.onclick = function(){
           g = this.innerHTML;
           button = document.getElementById(String(g));
@@ -137,6 +137,7 @@ var list;
       this.drawHangman = function(){
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
+        ctx.strokeStyle = "#156F74";
         if(lives == 8){ //head
           ctx.beginPath();
           ctx.arc(150, 100, 30, 0, 2 * Math.PI);
@@ -167,20 +168,21 @@ var list;
           ctx.lineTo(200, 260);
           ctx.stroke();          
         } else if(lives == 2){ //left eye
-          ctx.fillStyle = "#000000";
+          ctx.fillStyle = 'black';
           ctx.beginPath();
           ctx.arc(140, 90, 5, 0, 2 * Math.PI);
           ctx.stroke();
           ctx.fill();
 
         } else if(lives == 1){ //right eye
-          ctx.fillStyle = "#000000";
+          ctx.fillStyle = 'black';
           ctx.beginPath();
           ctx.arc(160, 90, 5, 0, 2 * Math.PI);
           ctx.stroke();
           ctx.fill();
 
         } else if(lives == 0){ //frown
+          ctx.strokeStyle = 'black';
           ctx.beginPath();
           ctx.arc(150, 115, 10, 0, Math.PI, true);
           ctx.stroke();
