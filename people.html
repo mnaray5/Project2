@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Food & Drink!</title>
+    <title>People!</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 </head>
 <script>
-    fWords = ["chicken fettuccine alfredo","double chocolate glazed donut",  "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
+    pWords = ["chicken fettuccine alfredo","double chocolate glazed donut",  "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
               "crusty everything bagel", "candy chip cookie and milk", "after dinner mint", "mixed berry smoothie", "fresh fruit sorbet",
               "champange and caviar", "chilled eggnog with cinnamon", "cold coconut water", "tropical pina colada", "darjeeling tea and lemon", "chill grapefruit spritzer", "a pitcher of fresh lemonade"];
     
@@ -29,7 +29,7 @@
         </div>
     </div>
     <br><br>
-    <h2 style="text-align: center;">Category: Food & Drink</h2>
+    <h2 style="text-align: center;">Category: People</h2>
     <br>
 
     <div style = "text-align: center;">
@@ -38,6 +38,7 @@
     <script>
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
+        //29 is the longest wprd length
     //vertical line
         ctx.moveTo(20, 290);
         ctx.lineTo(20, 50);
@@ -79,8 +80,7 @@
 
     <script src="rules.js"></script>
     <script>
-        
-        word = fWords[Math.floor(Math.random() * fWords.length)]; 
+       word = pWords[Math.floor(Math.random() * pWords.length)]; 
         console.log(word);
         makeWord(word);
     </script>
