@@ -59,8 +59,9 @@ var list;
           }
 
           myGuess.push(dash);
-          guessHolder.appendChild(holders);
           holders.appendChild(dash);
+          guessHolder.appendChild(holders);
+
         }
         
       }
@@ -91,6 +92,7 @@ var list;
         if(found == 0){
           lives--;
           //draw hangman
+          
         }
         if(lives == 0){
           disableAllButtons();
