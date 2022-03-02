@@ -14,9 +14,9 @@
 
 </head>
 <script>
-    pWords = ["chicken fettuccine alfredo","double chocolate glazed donut",  "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
-              "crusty everything bagel", "candy chip cookie and milk", "after dinner mint", "mixed berry smoothie", "fresh fruit sorbet",
-              "champange and caviar", "chilled eggnog with cinnamon", "cold coconut water", "tropical pina colada", "darjeeling tea and lemon", "chill grapefruit spritzer", "a pitcher of fresh lemonade"];
+    pWords = ["active duty soldier","airport security",  "lead vocalist", "summer olympic fans", "the best chefs in the world",
+              "best man and maid of honor", "a mix of tourists and locals", "kids of all ages", "", "jennifer lopez and ben afflek",
+              "olympian simone biles", "the cast of harry potter", "amy poehler and tina fey", "alexander hamilton", "nikola tesla and elon musk", "chris evans and chris pine", "neil patrick harris"];
     
 </script>
 <body>
@@ -75,12 +75,11 @@
     <div style = "text-align: center;">
         <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px;">Win or Loose?</button>
     </div>
- 
 
 
     <script src="rules.js"></script>
     <script>
-       word = pWords[Math.floor(Math.random() * pWords.length)]; 
+        word = pWords[Math.floor(Math.random() * pWords.length)]; 
         console.log(word);
         makeWord(word);
     </script>
