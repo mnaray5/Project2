@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People!</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
+    
+
+</head>
+<script>
+    plWords = ["a bungalow on the water","a city with a rich history",  "new york city", "lincoln hall at uic", "cinemas and museums",
+              "ice cream parlor", "wedding of my best friend", "kids of all ages", "flower clad fields", "steep mountain road",
+              "stylish beach hotel and spa", "fresh seafood market", "capital city of england", "the shallow end of the pool", "soccer stadium full of fans", "castles and charming villages", "private museum of russian art"];
+    
+</script>
+<body>
+    <div style = "text-align: center;">
+        <div style="display: inline-flex; padding-top: 5px;"> 
+            <button class="btn" style="font-size: 30px; width: 50px; height: 50px; vertical-align: top; background:url('images/homeIcon.jfif'); border: 2px solid lightseagreen; background-size: 50px 50px;  background-repeat: no-repeat; background-position: center;" onclick="location.href='index.html';"></button>
+            <span style = "padding-left: 10px; padding-right: 60px;">
+                <h1>Welcome to Hangman!</h1>
+            </span>
+        </div>
+    </div>
+    <br><br>
+    <h2 style="text-align: center;">Category: People</h2>
+    <br>
+
+    <div style = "text-align: center;">
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+    </div>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        //29 is the longest wprd length
+    //vertical line
+        ctx.moveTo(20, 290);
+        ctx.lineTo(20, 50);
+        ctx.stroke();
+
+    //top horizontal
+        ctx.moveTo(20, 50);
+        ctx.lineTo(150, 50);
+        ctx.stroke();
+    //bottom horizontal
+        ctx.moveTo(5, 290);
+        ctx.lineTo(150, 290);
+        ctx.stroke();
+    //top vertical
+        ctx.moveTo(150, 50);
+        ctx.lineTo(150, 70);
+        ctx.stroke();
+
+
+
+
+    </script>
+
+    <div id = "main">
+        <div style = "text-align: center;">
+            <div id = "mainGuess" style = "padding-right: 20px;"></div>
+
+        </div>
+    <div id = "buttons" style = "text-align: center;"></div>
+    </div>
+
+    <br><br>
+    
+    <div style = "text-align: center;">
+        <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px;">Win or Loose?</button>
+    </div>
+
+
+    <script src="rules.js"></script>
+    <script>
+        word = plWords[Math.floor(Math.random() * plWords.length)]; 
+        word = "";
+        for(x = 0; x <plWords.length; x++){
+            if(word.length < plWords[x].length){
+                word = plWords[x];
+            }
+        }
+        console.log(word);console.log(word.length);
+        makeWord(word);
+    </script>
+</body>
+</html>
