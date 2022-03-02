@@ -4,14 +4,14 @@
 }
 
 button{
-    color: lightseagreen;
-    background-color: rgb(245, 245, 245);
-    border: 1px solid lightseagreen;
+    color: rgb(245, 245, 245);
+    background-color: lightseagreen;
+    border: 1px solid rgb(245, 245, 245);
 }
 
 button:hover{
-    color: white;
-    background-color: lightseagreen;
+    color: lightseagreen;
+    background-color: white;
     border: 1px solid lightseagreen;
 }
 
@@ -46,8 +46,8 @@ button:hover{
 }
 
 .noButton:hover{
-    background-color: rgb(245, 245, 245);
-    color:lightseagreen;
+    background-color: lightseagreen;
+    color:rgb(245, 245, 245);
     border-color: rgb(245, 245, 245);
 }
 
@@ -68,13 +68,14 @@ button:hover{
 }
 
 .revealNext{
-    color: rgb(245, 245, 245);
+    color: white;
     background-color: lightseagreen;
+    font-size: 25px;
 }
 
 .revealNext:hover{
     color: lightseagreen;
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     border: 1px solid lightseagreen;
 }
 

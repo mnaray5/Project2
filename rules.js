@@ -34,6 +34,10 @@ var list;
       }
 
       this.check = function(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "20px Arial";
+        ctx.fillText("Lives: " + lives, 220, 20);
         list.onclick = function(){
           g = this.innerHTML;
           button = document.getElementById(String(g));
@@ -67,6 +71,8 @@ var list;
       }
 
       this.makeGuess = function(){
+
+
         console.log("make guess:" + g);
         //call a function to see if there are any dashes
         for(x = 0;x < mWord.length; x++){
