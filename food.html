@@ -31,6 +31,36 @@
     <br><br>
     <h2 style="text-align: center;">Category: Food & Drink</h2>
     <br>
+
+    <div style = "text-align: center;">
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+    </div>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+    //vertical line
+        ctx.moveTo(20, 290);
+        ctx.lineTo(20, 50);
+        ctx.stroke();
+
+    //top horizontal
+        ctx.moveTo(20, 50);
+        ctx.lineTo(150, 50);
+        ctx.stroke();
+    //bottom horizontal
+        ctx.moveTo(5, 290);
+        ctx.lineTo(150, 290);
+        ctx.stroke();
+    //top vertical
+        ctx.moveTo(150, 50);
+        ctx.lineTo(150, 70);
+        ctx.stroke();
+
+
+
+
+    </script>
+
     <div id = "main">
         <div style = "text-align: center;">
             <div id = "mainGuess" style = "padding-right: 20px;"></div>
@@ -44,6 +74,8 @@
     <div style = "text-align: center;">
         <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px;">Win or Loose?</button>
     </div>
+ 
+
 
     <script src="rules.js"></script>
     <script>

@@ -3,7 +3,7 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 
 var mWord = "";
 var myGuess = [];
 var fullGuess = [];
-var lives = 6;
+var lives = 9;
 var found = 0;
 var list;
 
@@ -91,7 +91,7 @@ var list;
         }
         if(found == 0){
           lives--;
-          //draw hangman
+          drawHangman();
           
         }
         if(lives == 0){
@@ -125,5 +125,58 @@ var list;
           dButtons.disabled = "true";
           dButtons.classList.remove('btn2');
           dButtons.classList.add('noButton');
+        }
+      }
+
+      this.drawHangman = function(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        if(lives == 8){ //head
+          ctx.beginPath();
+          ctx.arc(150, 100, 30, 0, 2 * Math.PI);
+          ctx.stroke();
+          
+        } else if(lives == 7){//body
+          ctx.moveTo(150, 130);
+          ctx.lineTo(150, 210);
+          ctx.stroke();
+
+        } else if(lives == 6){//left arm
+          ctx.moveTo(150, 160);
+          ctx.lineTo(100, 120);
+          ctx.stroke();
+
+        } else if(lives == 5){//right arm
+          ctx.moveTo(150, 160);
+          ctx.lineTo(200, 120);
+          ctx.stroke();
+
+        } else if(lives == 4){//left leg
+          ctx.moveTo(150, 210);
+          ctx.lineTo(100, 260);
+          ctx.stroke();
+
+        } else if(lives == 3){//right leg
+          ctx.moveTo(150, 210);
+          ctx.lineTo(200, 260);
+          ctx.stroke();          
+        } else if(lives == 2){ //left eye
+          ctx.fillStyle = "#000000";
+          ctx.beginPath();
+          ctx.arc(140, 90, 5, 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.fill();
+
+        } else if(lives == 1){ //right eye
+          ctx.fillStyle = "#000000";
+          ctx.beginPath();
+          ctx.arc(160, 90, 5, 0, 2 * Math.PI);
+          ctx.stroke();
+          ctx.fill();
+
+        } else if(lives == 0){ //frown
+          ctx.beginPath();
+          ctx.arc(150, 115, 10, 0, Math.PI, true);
+          ctx.stroke();
         }
       }
