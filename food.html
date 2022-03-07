@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
-    
-
 </head>
+
+
 <script>
     fWords = ["chicken fettuccine alfredo","double chocolate glazed donut",  "four cheese fondue", "spicy chilli cheese fries", "buttery garlic breadsticks",
               "crusty everything bagel", "candy chip cookie and milk", "after dinner mint", "mixed berry smoothie", "fresh fruit sorbet",
               "champange and caviar", "chilled eggnog with cinnamon", "cold coconut water", "tropical pina colada", "darjeeling tea and lemon", "chill grapefruit spritzer", "a pitcher of fresh lemonade"];
     
 </script>
-<body>
+<body style = "background-image: url('images/f1.png');background-position: 0px 0px; background-repeat: no-repeat; background-size: 100% 100%;">
     <div style = "text-align: center;">
         <div style="display: inline-flex; padding-top: 5px;"> 
             <button class="btn" style="font-size: 30px; width: 50px; height: 50px; vertical-align: top; background:url('images/homeIcon.jfif'); border: 2px solid lightseagreen; background-size: 50px 50px;  background-repeat: no-repeat; background-position: center;" onclick="location.href='index.html';"></button>
@@ -33,7 +33,7 @@
     <br>
 
     <div style = "text-align: center;">
-        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000; background-color: white;">
     </div>
     <script>
         var c = document.getElementById("myCanvas");
@@ -72,7 +72,7 @@
     <br>
     
     <div style = "text-align: center;">
-        <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px;">Win or Loose?</button>
+        <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px; opacity: 0.2;">Win or Loose?</button>
     </div>
  
 

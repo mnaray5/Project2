@@ -42,6 +42,7 @@ var list;
           g = this.innerHTML;
           button = document.getElementById(String(g));
           button.disabled = "true";
+          button.style = "opacity:1.0";
           button.classList.remove('btn2');
           button.classList.add('noButton');
           makeGuess(g);
@@ -91,6 +92,13 @@ var list;
           nextButton.innerHTML = "You Win!" + "<br>" + "Next Page!";
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
+          nextButton.style = "text-align: center; width: 300px; height: 100px; opacity: 1.0;";
+
+          /*nextButton = document.createElement("button");
+          nextButton.classList.add('btn');
+          nextButton.innerHTML = "You Win!" + "<br>" + "Next Page!";
+          nextButton.classList.add('revealNext');
+          document.getElementById("nexts").appendChild*/
           nextButton.onclick = function(){
             location.href = "winner.html";
           }
@@ -108,6 +116,10 @@ var list;
           nextButton.innerHTML = "Sorry, You Loose:(" + "<br />"+ "Next Page :(";
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
+          nextButton.style = "text-align: center; width: 300px; height: 100px; opacity: 1.0;";
+
+
+
           nextButton.onclick = function(){
             location.href = "loser.html";
           }
@@ -131,6 +143,8 @@ var list;
           dButtons.disabled = "true";
           dButtons.classList.remove('btn2');
           dButtons.classList.add('noButton');
+          dButtons.style = "opacity:1.0";
+
         }
       }
 

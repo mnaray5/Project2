@@ -15,11 +15,11 @@
 </head>
 <script>
     pWords = ["active duty soldier","airport security",  "lead vocalist", "summer olympic fans", "the best chefs in the world",
-              "best man and maid of honor", "a mix of tourists and locals", "kids of all ages", "", "jennifer lopez and ben afflek",
+              "best man and maid of honor", "a mix of tourists and locals", "kids of all ages", "iconic fashion photographers", "jennifer lopez and ben afflek",
               "olympian simone biles", "the cast of harry potter", "amy poehler and tina fey", "alexander hamilton", "nikola tesla and elon musk", "chris evans and chris pine", "neil patrick harris"];
     
 </script>
-<body>
+<body style = "background-image: url('images/pp4.png');background-position:center; background-repeat: no-repeat; background-size: 100% 100%;">
     <div style = "text-align: center;">
         <div style="display: inline-flex; padding-top: 5px;"> 
             <button class="btn" style="font-size: 30px; width: 50px; height: 50px; vertical-align: top; background:url('images/homeIcon.jfif'); border: 2px solid lightseagreen; background-size: 50px 50px;  background-repeat: no-repeat; background-position: center;" onclick="location.href='index.html';"></button>
@@ -33,7 +33,7 @@
     <br>
 
     <div style = "text-align: center;">
-        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000; background-color: white;">
     </div>
     <script>
         var c = document.getElementById("myCanvas");
@@ -44,6 +44,8 @@
         ctx.moveTo(20, 290);
         ctx.lineTo(20, 50);
         ctx.stroke();
+        console.log(window.innerHeight);
+
 
     //top horizontal
         ctx.moveTo(20, 50);
@@ -71,10 +73,10 @@
     <div id = "buttons" style = "text-align: center;"></div>
     </div>
 
-    <br><br>
+    <br>
     
     <div style = "text-align: center;">
-        <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px;">Win or Loose?</button>
+        <button id = "next" class = "btn" disabled = true style = "text-align: center; width: 300px; height: 100px; visibility: hidden;">Win or Loose?</button>
     </div>
 
 
@@ -82,7 +84,7 @@
     <script>
         word = pWords[Math.floor(Math.random() * pWords.length)]; 
         console.log(word);
-        makeWord(word);
+        makeWord("jennifer lopez and ben afflek");
     </script>
 </body>
 </html>

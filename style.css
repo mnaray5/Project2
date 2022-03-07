@@ -42,24 +42,27 @@ button:hover{
     align-items: center;
     display: inline-flex;
     padding: 15px; 
-    border-color: rgb(245, 245, 245);
+    background-color: rgb(165, 224, 221);
+    color:rgb(245, 245, 245);
+    border: none;
+
 }
 
 .noButton:hover{
-    background-color: lightseagreen;
+    background-color: rgb(165, 224, 221);
     color:rgb(245, 245, 245);
-    border-color: rgb(245, 245, 245);
+    border:none
 }
 
 .dash{
     display: inline-block;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     padding: 10px;
 }
 
 .under{
-    font-size: 25px;
+    font-size: 35px;
     padding: 0px;
 }
 
