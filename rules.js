@@ -11,6 +11,14 @@ var list;
         console.log(word);
         mWord = word;
         document.getElementById("next").classList.add('old');
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillRect(210,0,100,30);
+        ctx.fillStyle = "#000000";
+        ctx.font = "25px Trebuchet MS  ";
+        ctx.fillText("Lives: " + lives, 210, 20);
         result();
         makeButton();
     }
@@ -34,10 +42,6 @@ var list;
       }
 
       this.check = function(){
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        ctx.font = "25px Trebuchet MS  ";
-        ctx.fillText("Lives: " + lives, 210, 20);
         list.onclick = function(){
           g = this.innerHTML;
           button = document.getElementById(String(g));
@@ -73,7 +77,10 @@ var list;
 
       this.makeGuess = function(){
 
-
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "25px Trebuchet MS  ";
+        ctx.fillText("Lives: " + lives, 210, 20);
         console.log("make guess:" + g);
         //call a function to see if there are any dashes
         for(x = 0;x < mWord.length; x++){
@@ -105,6 +112,15 @@ var list;
         }
         if(found == 0){
           lives--;
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fillRect(210,0,100,30);
+          ctx.fillStyle = "#000000";
+          ctx.font = "25px Trebuchet MS  ";
+          ctx.fillText("Lives: " + lives, 210, 20);
+          console.log("make guess:" + g);
           drawHangman();
           
         }
