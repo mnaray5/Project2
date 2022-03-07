@@ -10,9 +10,12 @@ button{
 }
 
 button:hover{
-    color: lightseagreen;
+    /*color: lightseagreen;
     background-color: white;
-    border: 1px solid lightseagreen;
+    border: 1px solid lightseagreen;*/
+    color: white;
+    background-color: rgb(14, 82, 97);
+    border: 1px solid white;
 }
 
 .btn{

@@ -126,6 +126,10 @@ var list;
         }
         if(lives == 0){
           disableAllButtons();
+          //fill in the text
+          for(x = 0; x < mWord.length; x++){
+            myGuess[x].innerHTML = " <span class='under'>" + mWord.charAt(x) + "</span> "
+          }
           console.log("you loose");
           nextButton = document.getElementById("next");
           nextButton.classList.remove('old');
