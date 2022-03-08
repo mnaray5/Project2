@@ -12,6 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
 </head>
 <body>
+    <script>
+        messages = ["Sorry, you couldn't solve the puzzle :( " + "<br />"+ " Maybe try a different category next time?", 
+                   "Looks like this puzzle was a little tricky. " + "<br />"+ " Try again, you'll get it next time!",
+                   "Guess that category wasn't your cup of tea.  " + "<br />"+ "Good thing there are 2 more to try!"];
+    </script>
+
     <div style = "text-align: center;">
         <div style="display: inline-flex; padding-top: 5px;"> 
             <button class="btn" style="font-size: 30px; width: 50px; height: 50px; vertical-align: top; background:url('images/homeIcon.jfif'); border: 2px solid lightseagreen; background-size: 50px 50px;  background-repeat: no-repeat; background-position: center;" onclick="location.href='index.html';"></button>
@@ -22,12 +28,22 @@
     </div>
     <br><br>
     <div style = "text-align: center;">
-        <h1>You loose :(</h1>
-        <h1>pick a random message a display it here?</h1>
+        <h1>You Loose :(</h1>
+        <br>
+        <h1 id = "message">change message here?</h1>
+        
         <br>
         <br>
-        <h3>Button to play again? -> back to categories</h3>
+        <div class = "cButton">
+            <button class="btn" onclick="location.href='categories.html';" style = "text-align: center; width: 300px; height: 100px; font-size: 25px;">Wanna Play Again? <br> Pick a Category!</button>
+        </div>
     </div>
+
+    <script>
+        wMess = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById("message").innerHTML = wMess;
+    </script>
+
 
 </body>
 </html>
