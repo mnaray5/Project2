@@ -10,7 +10,7 @@ var list;
     this.makeWord = function(word){
         console.log(word);
         mWord = word;
-        document.getElementById("next").classList.add('old');
+        //document.getElementById("next").classList.add('old');
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
 
@@ -95,7 +95,6 @@ var list;
           disableAllButtons();
           console.log("winner!");
           nextButton = document.getElementById("next");
-          nextButton.classList.remove('old');
           nextButton.innerHTML = "You Win!" + "<br>" + "Next Page!";
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
@@ -132,7 +131,6 @@ var list;
           }
           console.log("you loose");
           nextButton = document.getElementById("next");
-          nextButton.classList.remove('old');
           nextButton.innerHTML = "Sorry, You Loose:(" + "<br />"+ "Next Page :(";
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;

@@ -22,6 +22,7 @@ button{
     color: rgb(245, 245, 245);
     background-color: lightseagreen;
     border: 1px solid rgb(245, 245, 245);
+    font-family: Convergence;
 }
 
 button:hover{
@@ -77,6 +78,7 @@ button:hover{
     text-align: center;
     font-size: 35px;
     padding: 10px;
+    font-family: Convergence;
 }
 
 .under{
@@ -95,19 +97,8 @@ button:hover{
 }
 
 .revealNext:hover{
-    color: lightseagreen;
-    background-color: white;
-    border: 1px solid lightseagreen;
-}
-
-.old{
-    color:white;
-    background-color: white;
-    border-color:white;
-}
-
-.old:hover{
     color: white;
-    background-color: white;
-    border-color:white;
+    background-color: rgb(14, 82, 97);
+    border: 1px solid white;
 }
+
