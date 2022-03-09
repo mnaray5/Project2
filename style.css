@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma&family=Convergence&family=Laila&display=swap');
 .cButton{
     padding-bottom: 50px;
     text-align: center;
+}
+
+h1{
+    font-family: Convergence;
+}
+
+h2{
+    font-family: Laila;
+    font-weight: bold;
+}
+
+p{
+    font-family: Laila;
+    font-size: larger;
 }
 
 button{
