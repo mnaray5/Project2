@@ -6,21 +6,23 @@ var fullGuess = [];
 var lives = 9;
 var found = 0;
 var list;
-
+var value = 0;
     this.makeWord = function(word){
         console.log(word);
         mWord = word;
         //document.getElementById("next").classList.add('old');
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
-
         ctx.fillStyle = "#FFFFFF";
         ctx.fillRect(210,0,100,30);
         ctx.fillStyle = "#000000";
         ctx.font = "25px Trebuchet MS  ";
         ctx.fillText("Lives: " + lives, 210, 20);
+        sessionStorage.setItem("value", value);
+
         result();
         makeButton();
+
     }
 
     this.makeButton = function () {
@@ -43,6 +45,7 @@ var list;
 
       this.check = function(){
         list.onclick = function(){
+          sessionStorage.setItem("value", value+1);
           g = this.innerHTML;
           button = document.getElementById(String(g));
           button.disabled = "true";
@@ -99,6 +102,8 @@ var list;
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
           nextButton.style = "text-align: center; width: 300px; height: 100px; opacity: 1.0;";
+          value2 = sessionStorage.getItem("value2");
+          sessionStorage.setItem("value2", value2+1);
 
           /*nextButton = document.createElement("button");
           nextButton.classList.add('btn');
@@ -135,7 +140,9 @@ var list;
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
           nextButton.style = "text-align: center; width: 300px; height: 100px; opacity: 1.0;";
+          value2 = sessionStorage.getItem("value2");
 
+          sessionStorage.setItem("value2", value2+1);
 
 
           nextButton.onclick = function(){

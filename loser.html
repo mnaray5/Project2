@@ -35,13 +35,22 @@
         <br>
         <br>
         <div class = "cButton">
-            <button class="btn" onclick="location.href='categories.html';" style = "text-align: center; width: 300px; height: 100px; font-size: 25px;">Wanna Play Again? <br> Pick a Category!</button>
+            <button class="btn" onclick="location.href='index.html';" style = "text-align: center; width: 300px; height: 100px; font-size: 25px;">Back to Home!</button>
+            <br><br>
+            <button class="btn" id = "BC" onclick="location.href='categories.html';" style = "text-align: center; width: 300px; height: 100px; font-size: 25px; visibility: hidden;">Wanna Play Again? <br> Pick a Category!</button>
         </div>
     </div>
 
     <script>
-        wMess = messages[Math.floor(Math.random() * messages.length)];
-        document.getElementById("message").innerHTML = wMess;
+        lMess = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById("message").innerHTML = lMess;
+
+        value2 = sessionStorage.getItem("value2");
+        console.log(value2);
+
+        if(value2 >= 2){
+            document.getElementById("BC").style = "text-align: center; width: 300px; height: 100px; font-size: 25px; opacity:1.0";
+        } 
     </script>
 
 
