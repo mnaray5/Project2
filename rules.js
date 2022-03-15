@@ -104,6 +104,7 @@ var value = 0;
           nextButton.style = "text-align: center; width: 300px; height: 100px; opacity: 1.0;";
           value2 = sessionStorage.getItem("value2");
           sessionStorage.setItem("value2", value2+1);
+          sessionStorage.setItem("lives", lives);
 
           /*nextButton = document.createElement("button");
           nextButton.classList.add('btn');

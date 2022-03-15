@@ -28,6 +28,7 @@
         <button class = "btn" onclick="location.href='instructions.html';"style = "text-align: center; width: 300px; height: 100px; font-size: 25px;">Read the Instructions!</button>
         <br>
         <br>
+        <button class="btn" id = "c" onclick="location.href='categories.html';" style = "text-align: center; width: 300px; height: 100px; font-size: 25px; visibility: hidden;">Ready to Play? <br> Choose your category!</button> 
         
     </div>
 
@@ -36,7 +37,9 @@
         value = sessionStorage.getItem("value");
         console.log(value);
 
-        if(value < 1){
+        if(value >= 1){
+            document.getElementById("c").style = "text-align: center; width: 300px; height: 100px; font-size: 25px; opacity:1.0";
+        } else {
             sessionStorage.setItem("value2", 0);
         }
 

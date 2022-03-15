@@ -17,6 +17,9 @@
                     "You found the Answer! " + "<br />"+ " Looks like you're ready for Wheel of Fortune!",
                     "Looks like this puzzle was too easy! " + "<br />"+ " Guess I'll have to find something harder!",
                     "You solved the Puzzle! " + "<br />"+ " Next Stop: Wheel of Fortune!"];
+        closeMessages = ["Wow! You solved it just in time!" + "<br />"+ "Nice Job!",
+                         "Cutting it close with the lives left!"  + "<br />"+  "In any case, congrats on solving the puzzle!",
+                         "You solved the puzzle just before running out of lives!" + "<br />"+ "Try another one, but maybe leave the hangman out of the gallows this time!"];
     </script>
     <div style = "text-align: center;">
         <div style="display: inline-flex; padding-top: 5px;"> 
@@ -42,7 +45,11 @@
     </div>
 
     <script>
+        lives = sessionStorage.getItem("lives");
         wMess = messages[Math.floor(Math.random() * messages.length)];
+        if(lives <=3){
+            wMess = closeMessages[Math.floor(Math.random() * closeMessages.length)];
+        }
         document.getElementById("message").innerHTML = wMess;
   
         value2 = sessionStorage.getItem("value2");
