@@ -135,9 +135,9 @@ var value = 0;
           for(x = 0; x < mWord.length; x++){
             myGuess[x].innerHTML = " <span class='under'>" + mWord.charAt(x) + "</span> "
           }
-          console.log("you loose");
+          console.log("you lose");
           nextButton = document.getElementById("next");
-          nextButton.innerHTML = "Sorry, You Loose:(" + "<br />"+ "Next Page :(";
+          nextButton.innerHTML = "Sorry, You Lose:(" + "<br />"+ "Next Page :(";
           nextButton.classList.add('revealNext');
           nextButton.disabled = false;
           nextButton.style = "text-align: center; width: 300px; height: 100px; opacity: 1.0;";
